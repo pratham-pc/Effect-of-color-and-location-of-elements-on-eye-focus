@@ -6,7 +6,7 @@ data <- read.csv('merged-aggregate-merged.csv')
 #histogram color-location wise
 ggplot(data, aes(x=data.circle, y=data.time_span/sum(data.time_span)*100, fill=data.color))+
   geom_bar(width = 1, stat = "identity") +
-  ggtitle("Bar-Plot for Loaction and Color vs Time-span") +
+  ggtitle("Bar-Plot for Location and Color vs Time-span") +
   labs(x="Location",y="%-Time-span") +
   theme(plot.title = element_text(family = "Trebuchet MS", color="#666666", face="bold", size=32, hjust=0))+
   theme(axis.title = element_text(family = "Trebuchet MS", color="#666666", face="bold", size=22))+
