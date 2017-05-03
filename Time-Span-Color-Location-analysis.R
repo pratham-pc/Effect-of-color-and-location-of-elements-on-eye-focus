@@ -134,7 +134,7 @@ ggplot(cpdata_location, aes(x="", y=data.time_span/sum(data.time_span)*100, fill
   geom_bar(width = 1, stat = "identity") +
   coord_polar("y", start=0)+
   ggtitle("Pie-Plot for Location vs %-Time-span") +
-  labs(x="Location",y="%-Time-span") +
+  labs(x="Location",y="%-Time-span", fill="data.position") +
   theme(plot.title = element_text(family = "Trebuchet MS", color="#666666", face="bold", size=32, hjust=0))+
   theme(axis.title = element_text(family = "Trebuchet MS", color="#666666", face="bold", size=22))+
   scale_fill_manual(values=c("#0000FF", "#00ff00", "#FF4500", "#ff0000", "#ffffff", "#ffff00"))
@@ -142,7 +142,7 @@ ggplot(cpdata_location, aes(x="", y=data.time_span/sum(data.time_span)*100, fill
 ggplot(cpdata_location, aes(x=data.circle, y=data.time_span/sum(data.time_span)*100, fill=data.circle))+
   geom_bar(width = 1, stat = "identity") +
   ggtitle("Bar-Plot for Location vs %-Time-span") +
-  labs(x="Location",y="%-Time-span") +
+  labs(x="Location",y="%-Time-span", fill="data.position") +
   theme(plot.title = element_text(family = "Trebuchet MS", color="#666666", face="bold", size=32, hjust=0))+
   theme(axis.title = element_text(family = "Trebuchet MS", color="#666666", face="bold", size=22))+
   scale_fill_manual(values=c("#0000FF", "#00ff00", "#FF4500", "#ffffff", "#ff0000", "#ffff00"))
@@ -161,7 +161,7 @@ ggplot(cpdata_location_red, aes(x="", y=cpdata_location_red$data.time_span/sum(c
   geom_bar(width = 1, stat = "identity") +
   coord_polar("y", start=0)+
   ggtitle("Pie-Plot for Location vs %-Time-span\nfor Red Color") +
-  labs(x="Location",y="%-Time-span") +
+  labs(x="Location",y="%-Time-span", fill="data.position") +
   theme(plot.title = element_text(family = "Trebuchet MS", color="#666666", face="bold", size=32, hjust=0))+
   theme(axis.title = element_text(family = "Trebuchet MS", color="#666666", face="bold", size=22))+
   scale_fill_manual(values=c("#0000FF", "#00ff00", "#FF0000", "#ff4500", "#ffff00", "#ffff00"))
@@ -179,8 +179,8 @@ ggplot(cpdata_location_blue, aes(x=data.circle, y=data.time_span/sum(data.time_s
 ggplot(cpdata_location_blue, aes(x="", y=cpdata_location_blue$data.time_span/sum(cpdata_location_blue$data.time_span)*100, fill=data.circle))+
   geom_bar(width = 1, stat = "identity") +
   coord_polar("y", start=0)+
-  ggtitle("Pie-Plot for Location vs %-Time-span for Blue Color") +
-  labs(x="Location",y="%-Time-span") +
+  ggtitle("Pie-Plot for Location vs %-Time-span\nfor Blue Color") +
+  labs(x="Location",y="%-Time-span", fill="data.position") +
   theme(plot.title = element_text(family = "Trebuchet MS", color="#666666", face="bold", size=32, hjust=0))+
   theme(axis.title = element_text(family = "Trebuchet MS", color="#666666", face="bold", size=22))+
   scale_fill_manual(values=c("#ffff00", "#00ff00", "#FF4500", "#ff0000", "#0000FF", "#ffff00"))
@@ -199,7 +199,7 @@ ggplot(cpdata_location_green, aes(x="", y=cpdata_location_green$data.time_span/s
   geom_bar(width = 1, stat = "identity") +
   coord_polar("y", start=0)+
   ggtitle("Pie-Plot for Location vs %-Time-span\nfor Green Color") +
-  labs(x="Location",y="%-Time-span") +
+  labs(x="Location",y="%-Time-span", fill="data.position") +
   theme(plot.title = element_text(family = "Trebuchet MS", color="#666666", face="bold", size=32, hjust=0))+
   theme(axis.title = element_text(family = "Trebuchet MS", color="#666666", face="bold", size=22))+
   scale_fill_manual(values=c("#0000FF", "#00ff00", "#FF4500", "#ff0000", "#ffff00", "#ffff00"))
@@ -218,7 +218,7 @@ ggplot(cpdata_location_orange, aes(x="", y=cpdata_location_orange$data.time_span
   geom_bar(width = 1, stat = "identity") +
   coord_polar("y", start=0)+
   ggtitle("Pie-Plot for Location vs %-Time-span\nfor Orange Color") +
-  labs(x="Location",y="%-Time-span") +
+  labs(x="Location",y="%-Time-span", fill="data.position") +
   theme(plot.title = element_text(family = "Trebuchet MS", color="#666666", face="bold", size=32, hjust=0))+
   theme(axis.title = element_text(family = "Trebuchet MS", color="#666666", face="bold", size=22))+
   scale_fill_manual(values=c("#0000FF", "#00ff00", "#FF0000", "#FF4500", "#ffff00", "#ffff00"))
@@ -236,7 +236,7 @@ ggplot(cpdata_location_yellow, aes(x="", y=cpdata_location_yellow$data.time_span
   geom_bar(width = 1, stat = "identity") +
   coord_polar("y", start=0)+
   ggtitle("Pie-Plot for Location vs %-Time-span\nfor Yellow Color") +
-  labs(x="Location",y="%-Time-span") +
+  labs(x="Location",y="%-Time-span", fill="data.position") +
   theme(plot.title = element_text(family = "Trebuchet MS", color="#666666", face="bold", size=32, hjust=0))+
   theme(axis.title = element_text(family = "Trebuchet MS", color="#666666", face="bold", size=22))+
   scale_fill_manual(values=c("#ffff00", "#00ff00", "#FF0000", "#FF4500", "#0000ff", "#0000FF"))
